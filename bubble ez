@@ -1,0 +1,39 @@
+
+
+run = True
+
+while run:
+
+    prices = []
+
+    prodnum = int(input("how many products do you want? "))
+    prode = prodnum - 1
+
+
+
+    for i in range(prodnum):
+        price = float(input("what is the price? "))
+        prices.append(price)
+
+    og = prices.copy()
+
+    swap = True
+
+    while swap:
+        swap = False
+        for i in range(prode):
+            if prices [i] > prices [i + 1]:
+                temp = prices[i]
+                prices[i] = prices[i + 1]
+                prices[i + 1] = temp
+                swap = True
+
+            
+    print(prices)
+    print(f"orignial list {og}")
+
+    question = input("do you want to run again? y/n? ")
+    if question =="n":
+        run = False
+    
+
